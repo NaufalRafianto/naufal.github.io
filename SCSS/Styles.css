@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: 400 1rem "Comfortaa";
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+#header {
+  min-width: 768px;
+  max-height: 100px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+#header #header_container {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#header #header_container #header_logo {
+  position: relative;
+  top: -10px;
+}
+#header #header_container #header_logo a {
+  font: 700 5rem "Sacramento";
+}
+#header #header_container .header_navbar {
+  min-width: 500px;
+}
+#header #header_container .header_navbar a {
+  position: relative;
+  font: 200 2rem "Comfortaa";
+  padding: 0 15px;
+}
+#header #header_container .header_navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: #2b2b2b;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+#header #header_container .header_navbar a:hover:after {
+  width: 100%;
+}
+#header #header_container #header_social {
+  max-width: 150px;
+}
+#header #header_container #header_social a {
+  padding: 0 7.5px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  #header {
+    min-width: 100vw;
+  }
+  #header #header_container .header_navbar,
+#header #header_container #header_social {
+    display: none;
+  }
+}/*# sourceMappingURL=Styles.css.map */

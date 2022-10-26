@@ -9,14 +9,6 @@ $(document).ready(() => {
         return id.css(property, value);
     }
 
-    if (screen.width <= 800) {
-        setCSS(activeCircle, "left", "0")
-        setCSS(activeCircle, "bottom", "5px")
-    } else {
-        setCSS(activeCircle, "top", "0")
-        setCSS(activeCircle, "left", "5px")
-    }
-
     const slider = (button, link) => {
 
         button.click(() => {

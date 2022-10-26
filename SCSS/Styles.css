@@ -94,8 +94,8 @@
 }
 #home #slider #slider_container div {
   cursor: pointer;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   background-color: #2b2b2b;
 }

@@ -134,10 +134,10 @@
     display: none;
   }
   #home #slider {
-    width: 91vw;
+    width: 95vw;
     max-height: 50px;
     bottom: 0;
-    transform: translateY(750%);
+    transform: translateY(900%);
     align-items: flex-start;
     background-color: white;
     border-radius: 15px;
@@ -165,7 +165,7 @@
   #home #slider #slider_container {
     bottom: 5px;
     left: 0;
-    min-width: 90vw;
+    min-width: 95vw;
     flex-direction: row;
     align-items: center;
     z-index: 99;

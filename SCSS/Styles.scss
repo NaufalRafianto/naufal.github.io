@@ -8,6 +8,8 @@ $second: #454158;
   font: 400 1rem "Comfortaa";
   text-decoration: none;
   color: $dark;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #header {
@@ -24,6 +26,7 @@ $second: #454158;
     #header_logo {
       position: relative;
       top: -10px;
+      min-width: 125px;
       a {
         font: 700 5rem "Sacramento";
       }
@@ -63,8 +66,42 @@ $second: #454158;
   }
 }
 
-#bottom_header_container {
-  display: none;
+#main {
+  width: 100vw;
+  height: 100vh;
+  #slider {
+    position: fixed;
+    top: 250px;
+    right: 2.5%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+
+    #line_track {
+      width: 5px;
+      min-height: 500px;
+      border-radius: 5px;
+      background-color: $dark;
+    }
+
+    #slider_container {
+      position: absolute;
+      top: 0;
+      right: 12.5px;
+      z-index: 100;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      div {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color: $dark;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -77,32 +114,29 @@ $second: #454158;
     }
   }
 
-  #bottom_header {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    max-height: 100px;
-    box-shadow: 5px -2.5px 5px rgba(0, 0, 0, 0.1);
-    #bottom_header_container {
-      display: flex;
-      justify-content: space-around;
+  #main {
+    #slider {
+      width: 90vw;
+      height: 450px;
+      bottom: 0;
+      align-items: flex-start;
 
-      div {
-        position: relative;
-        a {
-          text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-          padding: 10px 0;
-          font-size: 2rem;
-        }
+      #line_track {
+        transform: rotate(90deg);
+        background-color: $dark;
+        position: absolute;
+        left: 50%;
+        bottom: -240px;
+      }
 
-        &:hover {
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-
-          a {
-            color: white;
-            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-          }
-        }
+      #slider_container {
+        top: 400px;
+        left: 0;
+        min-width: 90vw;
+        height: 75px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
       }
     }
   }

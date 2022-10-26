@@ -21,17 +21,17 @@ $(document).ready(() => {
                     setCSS(activeCircle, "bottom", "7.5px")
                 }
                 else if (button === about) {
-                    setCSS(activeCircle, "left", "100px")
+                    setCSS(activeCircle, "left", "25vw")
                     setCSS(activeCircle, "bottom", "7.5px")
 
                 }
                 else if (button === work) {
-                    setCSS(activeCircle, "left", "210px")
+                    setCSS(activeCircle, "left", "52.5vw")
                     setCSS(activeCircle, "bottom", "7.5px")
 
                 }
                 else if (button === contact) {
-                    setCSS(activeCircle, "left", "320px")
+                    setCSS(activeCircle, "left", "82.5vw")
                     setCSS(activeCircle, "bottom", "7.5px")
 
                 }

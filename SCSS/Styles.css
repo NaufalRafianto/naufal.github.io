@@ -134,10 +134,10 @@
     display: none;
   }
   #home #slider {
-    width: 90vw;
+    width: 91vw;
     max-height: 50px;
     bottom: 0;
-    transform: translateY(500px);
+    transform: translateY(750%);
     align-items: flex-start;
     background-color: white;
     border-radius: 15px;

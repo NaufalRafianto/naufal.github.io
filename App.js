@@ -4,6 +4,11 @@ $(document).ready(() => {
     const work = $("#work_button")
     const contact = $("#contact_button")
     const activeCircle = $("#active_circle")
+    const redButton = $("#home_content_icon_red")
+    const greenButton = $("#home_content_icon_green")
+    const yellowButton = $("#home_content_icon_yellow")
+    const homeContent = $("#home_content")
+    const homeOpen = $("#home_open_icon")
 
     const setCSS = (id, property, value) => {
         return id.css(property, value);
@@ -63,6 +68,33 @@ $(document).ready(() => {
     slider(about, "#about")
     slider(work, "#work")
     slider(contact, "#contact")
+
+    redButton.click(() => {
+        homeContent.toggleClass("close")
+        homeContent.removeClass("minimize")
+        homeContent.removeClass("maximize")
+        $("#home_open").removeClass("close")
+
+    })
+    yellowButton.click(() => {
+        homeContent.toggleClass("minimize")
+        homeContent.removeClass("close")
+        homeContent.removeClass("maximize")
+    })
+    greenButton.click(() => {
+        homeContent.toggleClass("maximize")
+        homeContent.removeClass("close")
+        homeContent.removeClass("minimize")
+        window.location.href = '#home'
+    })
+
+    homeOpen.click(() => {
+        homeContent.toggleClass("close")
+        $("#home_open").toggleClass("close")
+    })
+
+
+
 
 
 })

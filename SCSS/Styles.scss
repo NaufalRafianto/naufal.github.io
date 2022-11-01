@@ -124,13 +124,13 @@ $second: #454158;
   &_content {
     // display: none !important;
     width: 50vw;
-    height: 75vh;
+    height: 50vh;
     border-radius: 10px;
     background: #ffffff;
     box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(3, 25px) 35px repeat(2, 25px) 50px 1fr 25px 50px repeat(
+    grid-template-rows: repeat(4, 25px) repeat(2, 25px) 50px 1fr 25px 50px repeat(
         2,
         25px
       );
@@ -199,6 +199,7 @@ $second: #454158;
       display: flex;
       align-items: center;
       justify-content: center;
+      opacity: 0.75;
 
       &::before {
         content: "";
@@ -230,7 +231,7 @@ $second: #454158;
       }
     }
     &_title {
-      grid-area: 4 / 1 / 5 / 10;
+      grid-area: 4 / 1 / 5 / 6;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -290,11 +291,9 @@ $second: #454158;
       }
     }
     &_h1_open {
-      width: 180px;
-      grid-area: 7 / 3 / 10 / 5;
+      grid-area: 7 / 3 / 10 / 7;
       position: absolute;
       span {
-        // font-size: 2rem;
         color: #ffbd44;
       }
 
@@ -316,25 +315,24 @@ $second: #454158;
       display: flex;
       align-items: center;
       justify-content: center;
-      max-height: 150px;
 
       svg {
-        max-width: 750px;
-        max-height: 150px;
+        width: 100%;
+        height: 100%;
       }
 
       path {
         fill: transparent;
         stroke-width: 1;
         stroke: $dark;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        animation: handwriting 20s linear forwards;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+        animation: handwriting 10s linear forwards;
       }
 
       &:hover {
         path {
-          animation: handwritingBackward 20s linear infinite;
+          animation: handwritingBackward 10s linear infinite;
         }
       }
     }
@@ -446,6 +444,14 @@ $second: #454158;
   .maximize {
     width: 100vw;
     height: 100vh;
+
+    div {
+      font-size: 1.5rem;
+
+      span {
+        font-size: 2rem;
+      }
+    }
   }
 
   .close {
@@ -590,10 +596,11 @@ $second: #454158;
       }
       &_title {
         grid-area: 5/1/5/10;
-        // left: 100px;
+        transform: translateY(-5px) translateX(25px);
 
         div {
           span {
+            letter-spacing: 0.1px;
             font-size: 1rem;
           }
         }
@@ -627,7 +634,7 @@ $second: #454158;
 
       &_svg {
         grid-area: 7 / 1 / 10 / 9;
-        transform: translateX(25px);
+        transform: translateX(25px) translateY(75px);
         width: 90%;
         max-height: 150px;
 
@@ -678,10 +685,10 @@ $second: #454158;
 // ========================================== ANIMATION SECTION ====================================
 @keyframes handwriting {
   0% {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 450;
   }
-  50% {
-    stroke-dashoffset: 500;
+  99% {
+    stroke-dashoffset: 0;
   }
   100% {
     stroke-dashoffset: 0;
